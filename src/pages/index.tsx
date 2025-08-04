@@ -16,7 +16,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [yesCount, setYesCount] = useState(0);
   const [noCount, setNoCount] = useState(0);
-  // const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("");
 
   const connectWallet = async () => {
     if (typeof window === "undefined" || !window.ethereum) {
@@ -60,6 +60,7 @@ export default function Home() {
     }
 
     setLoading(false);
+    setMessage("Successfully Voted!");
   };
 
   // Fetch current results
